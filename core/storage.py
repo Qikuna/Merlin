@@ -33,12 +33,12 @@ os.makedirs(DATA_DIR, exist_ok=True)
 
 
 def get_file_path(date_str):
-    """Returns the absolute path of the JSON storage file for a given date."""
+
     return os.path.join(DATA_DIR, f"{date_str}.json")
 
 
 def load_day(date_str):
-    """Loads a specific day's JSON. Returns a skeleton structure if nonexistent."""
+
     file_path = get_file_path(date_str)
     if not os.path.exists(file_path):
         return {"date": date_str, "blocks": []}
@@ -51,14 +51,14 @@ def load_day(date_str):
 
 
 def save_day(date_str, data):
-    """Serializes text blocks down into their respective JSON files."""
+
     file_path = get_file_path(date_str)
     with open(file_path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
 def get_all_dates():
-    """Scans the data repository returning a sorted catalog of logged days."""
+
     if not os.path.exists(DATA_DIR):
         return []
     files = os.listdir(DATA_DIR)
@@ -67,14 +67,14 @@ def get_all_dates():
 
 
 def delete_day(date_str):
-    """Physically obliterates a date's JSON file completely."""
+
     file_path = get_file_path(date_str)
     if os.path.exists(file_path):
         os.remove(file_path)
 
 
 def delete_specific_entry(date_str, block_index):
-    """Removes a targeted text entry inside a day package via index tracking."""
+
     data = load_day(date_str)
     if 0 <= block_index < len(data["blocks"]):
         data["blocks"].pop(block_index)

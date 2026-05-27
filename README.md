@@ -2,13 +2,11 @@ Merlin is a lightweight, interactive Terminal User Interface (TUI) designed for 
 
 Key Features:
 
-    1. Vim-like Navigation:** Seamless split-panel control using `j`, `k`, and `TAB`.
-    2. Smart In-Line Formatting: Expressive shorthand color tokens (`#r` for red, `#g`
+    1. Smart In-Line Formatting: Expressive shorthand color tokens (`#r` for red, `#g`
     for green, etc.).
-    3. Hybrid Storage Architecture: Automatically adheres to modern Linux XDG
+    2. Hybrid Storage Architecture: Automatically adheres to modern Linux XDG
     specifications (`~/.local/share`) but locks into a completely isolated standalone
     portable mode if a local `/data` directory is detected.
-    4. 100% Free Software: Licensed under the copyleft protection of the GNU GPLv3.
 
 Merlin can be installed or not, the only difference between those options is
 that installing it allows you to open it by just calling "merlin" in the terminal
@@ -31,7 +29,7 @@ and the portable way requires you to navigate to "merlin.py".
     2. Open the terminal in the folder and give permissions to "merlin.py":
         -> chmod +x merlin.py
     3. Open the program:
-        -> ./merlin.py
+        -> python3 merlin.py
 
 Developer comment: I made the program with AI's help just to take quick notes at
-university, but if you like it I hope you enjoy it.
+university and kill some time, if you like it I hope you enjoy it.

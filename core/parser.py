@@ -19,10 +19,6 @@ COLOR_MAP = {"r": "red", "g": "green", "b": "blue", "y": "yellow", "w": "white"}
 
 
 def process_line(raw_text):
-    """
-    Analyzes if a line starts with a color token (e.g., '#r Hello').
-    Returns a tuple: (clean_text, color_name)
-    """
 
     match = re.match(r"^#([rgbyw])\s(.*)", raw_text)
     if match:

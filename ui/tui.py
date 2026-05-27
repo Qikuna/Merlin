@@ -43,7 +43,7 @@ def init_colors():
 
 
 def safe_addstr(stdscr, y, x, text, attr=0):
-    """Writes text onto screen space while validating terminal dimensions."""
+
     height, width = stdscr.getmaxyx()
     if 0 <= y < height and 0 <= x < width:
         max_len = width - x - 1
@@ -57,7 +57,7 @@ def safe_addstr(stdscr, y, x, text, attr=0):
 
 
 def input_parrafo(stdscr, y, x, max_width, max_lines):
-    """Permite redactar un párrafo completo que se auto-ajusta en varias líneas de alto."""
+
     curses.curs_set(1)
     buffer_texto = ""
 
@@ -190,7 +190,7 @@ def tui_controller(stdscr):
             stdscr,
             height - 1,
             0,
-            "[j/k or ↑/↓]: Navigate | [TAB]: Switch Focus | [n]: New Entry | [x]: Delete | [q]: Quit",
+            "[↑/↓]: Navigate | [TAB]: Switch Focus | [n]: New Entry | [x]: Delete | [q]: Quit",
             curses.A_DIM,
         )
         stdscr.refresh()
