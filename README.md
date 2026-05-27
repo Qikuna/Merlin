@@ -1,10 +1,10 @@
-Merlin is a lightweight, interactive Terminal User Interface (TUI) designed for micro-logging and daily journaling. Built completely in Python using the native "curses" library, it allows you to quickly log thoughts, stamp timestamps, and categorize entries using semantic color tags without your fingers ever leaving the home row.
+Merlin is a lightweight, interactive TUI designed for micro-logging and daily journaling. Built completely in Python using the native "curses" library, it allows you to quickly log thoughts, stamp timestamps, and categorize entries using semantic color tags without your fingers ever leaving the home row.
 
 Key Features:
 
-    1. Smart In-Line Formatting: Expressive shorthand color tokens (`#r` for red, `#g`
+    1. Color formatting: Expressive shorthand color tokens (`#r` for red, `#g`
     for green, etc.).
-    2. Hybrid Storage Architecture: Automatically adheres to modern Linux XDG
+    2. Hybrid storage architecture: Automatically adheres to modern Linux XDG
     specifications (`~/.local/share`) but locks into a completely isolated standalone
     portable mode if a local `/data` directory is detected.
 
